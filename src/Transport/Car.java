@@ -1,14 +1,7 @@
 package Transport;
 
-import com.sun.jdi.connect.Transport;
-
 public class Car extends Transport {
-    private final String brand;
-    private final String model;
     private double engineCapacity;
-    private String color;
-    private int year;
-    private final String country;
     private String transmission;
     private final String bodyType;
     private String regNumber;
@@ -17,14 +10,10 @@ public class Car extends Transport {
     private Key key;
 
     public Car(String brand, String model, double engineCapacity, String color,
-               int year, String country, String transmission, String bodyType,
+               int year, int maxSpeed, String country, String transmission, String bodyType,
                String regNumber, int numberSeats, Key key) {
-        this.brand = brand;
-        this.model = model;
+        super (brand,model,year,color,country,maxSpeed);
         this.engineCapacity = engineCapacity;
-        this.color = color;
-        this.year = year;
-        this.country = country;
         this.transmission = transmission;
         this.bodyType = bodyType;
         this.regNumber = regNumber;
@@ -32,29 +21,6 @@ public class Car extends Transport {
         this.key = key;
     }
 
-    public String getBrand() {
-        return brand;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getEngineCapacity() {
-        return engineCapacity;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public String getCountry() {
-        return country;
-    }
 
     public String getTransmission() {
         return transmission;
@@ -137,9 +103,7 @@ public class Car extends Transport {
     }
 
     public String toString() {
-        return getBrand() + " " + getModel() + ", " + getEngineCapacity() + ", " + getColor()
-                + ", " + getYear() + ", " + getCountry() + " " + getTransmission() + ", " +
-                getBodyType() + ", " + getNumberSeats() + ", " + getRegNumber() + ", ";
+        return super.toString() + getTransmission() + ", " + getBodyType() + ", " + getNumberSeats() + ", " + getRegNumber() + ", ";
 
     }
 
