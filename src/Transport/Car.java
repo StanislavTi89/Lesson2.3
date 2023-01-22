@@ -103,7 +103,7 @@ public class Car extends Transport {
     }
 
     public String toString() {
-        return super.toString() + getTransmission() + ", " + getBodyType() + ", " + getNumberSeats() + ", " + getRegNumber() + ", ";
+        return super.toString() +", коробка передач: "+ getTransmission() + ", тип кузова: " + getBodyType() + ", мест: " + getNumberSeats() + ", рег.Номер: " + getRegNumber();
 
     }
 
