@@ -1,3 +1,4 @@
+import Transport.Bus;
 import Transport.Car;
 
 public class Main {
@@ -9,5 +10,18 @@ public class Main {
                 "ст123rus23", 4,
                 new Car.Key(true, true));
         System.out.println(Toyota);
+
+        Bus bus = new Bus("Ikarus",
+                "250",
+                280,
+                "Red-White",
+                1996,
+                120,
+                "Венгрия",
+                "Manual",
+                "Bus",
+                "0005BEE",
+                60);
+        System.out.println(bus);
     }
 }
